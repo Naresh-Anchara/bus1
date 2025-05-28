@@ -18,7 +18,7 @@ function BookNow() {
     try {
       dispatch(showLoading());
       const response = await axiosInstance.post
-      ("http://localhost:5000/api/bookings/book-seat", {
+      ("https://busbackend-y1x0.onrender.com/api/bookings/book-seat", {
         bus: bus._id,
         seats: selectedSeats,
       });
@@ -42,7 +42,7 @@ function BookNow() {
     try {
       dispatch(showLoading());
       const response = await axiosInstance.post
-      ("http://localhost:5000/api/buses/get-bus-by-id", {
+      ("https://busbackend-y1x0.onrender.com/api/buses/get-bus-by-id", {
         _id: params.id,
       });
       dispatch(hideLoading());

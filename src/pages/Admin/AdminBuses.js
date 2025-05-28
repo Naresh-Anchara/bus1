@@ -14,7 +14,7 @@ function AdminBuses() {
   const getBuses = async () => {
     try {
       dispatch(showLoading());
-      const response = await axiosInstance.post("http://localhost:5000/api/buses/get-all-buses", {});
+      const response = await axiosInstance.post("https://busbackend-y1x0.onrender.com/api/buses/get-all-buses", {});
       dispatch(hideLoading());
       if (response.data.success) {
         setBuses(response.data.data);
@@ -30,7 +30,7 @@ function AdminBuses() {
   const deleteBus = async (id) => {
     try {
       dispatch(showLoading());
-      const response = await axiosInstance.post("http://localhost:5000/api/buses/delete-bus", {
+      const response = await axiosInstance.post("https://busbackend-y1x0.onrender.com/api/buses/delete-bus", {
         _id: id,
       });
       dispatch(hideLoading());

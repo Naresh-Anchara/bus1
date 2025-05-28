@@ -17,7 +17,7 @@ function App() {
   const {loading} = useSelector(state => state.alerts);
   return (
     <div> 
-      {/*
+      
       { loading && <Loader/> }
       <HashRouter>
         <Routes>
@@ -33,9 +33,7 @@ function App() {
         </Routes>
       </HashRouter>  
       
-      */}  
-      <h1>hello</h1>
-
+    
     </div>
   );
 }

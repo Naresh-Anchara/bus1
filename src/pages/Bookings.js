@@ -17,7 +17,7 @@ function Bookings() {
     try {
       dispatch(showLoading());
       const response = await axiosInstance.post(
-        'http://localhost:5000/api/bookings/get-bookings-by-user-id',
+        'https://busbackend-y1x0.onrender.com/api/bookings/get-bookings-by-user-id',
         {}
       );
       dispatch(hideLoading());

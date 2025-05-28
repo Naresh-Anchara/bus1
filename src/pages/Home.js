@@ -21,7 +21,7 @@ function Home() {
     try{
     dispatch(showLoading());
     const response = await axios.post(
-      "http://localhost:5000/api/buses/get-all-buses",
+      "https://busbackend-y1x0.onrender.com/api/buses/get-all-buses",
       tempFilters,
       {
         headers: {

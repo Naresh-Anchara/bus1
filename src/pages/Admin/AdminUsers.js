@@ -13,7 +13,7 @@ function AdminUsers() {
     try {
       dispatch(showLoading());
       const response = await axiosInstance.post
-      ("http://localhost:5000/api/users/get-all-users", {});
+      ("https://busbackend-y1x0.onrender.com/api/users/get-all-users", {});
       dispatch(hideLoading());
       if (response.data.success) {
         setUsers(response.data.data);
@@ -40,7 +40,7 @@ function AdminUsers() {
   
       dispatch(showLoading());
       const response = await axiosInstance.post(
-        "http://localhost:5000/api/users/update-user-permissions",
+        "https://busbackend-y1x0.onrender.com/api/users/update-user-permissions",
         payload
       );
       dispatch(hideLoading());

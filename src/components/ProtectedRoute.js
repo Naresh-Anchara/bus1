@@ -38,7 +38,7 @@ function ProtectedRoute({children}) {
             const token = localStorage.getItem('token');
             if (!token) throw new Error('Token not found'); // Early validation
             const response = await axios.post(
-                'http://localhost:5000/api/users/get-user-by-id',
+                'https://busbackend-y1x0.onrender.com/api/users/get-user-by-id',
                 {},
                 {
                     headers: {

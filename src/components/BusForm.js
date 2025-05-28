@@ -17,10 +17,10 @@ function BusForm({ showBusForm, setShowBusForm, type = 'add',getData,selectedBus
     try {
       dispatch(showLoading());
       if (type === 'add') {
-        response = await axiosInstance.post('http://localhost:5000/api/buses/add-bus',
+        response = await axiosInstance.post('https://busbackend-y1x0.onrender.com/api/buses/add-bus',
          values);
       } else {
-        response = await axiosInstance.post('http://localhost:5000/api/buses/update-bus',
+        response = await axiosInstance.post('https://busbackend-y1x0.onrender.com/api/buses/update-bus',
         {
           ...values,
          _id : selectedBus._id, 
