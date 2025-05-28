@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import './resources/global.css'
 import Register from "./pages/Register";
@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       { loading && <Loader/> }
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
            {/* <Route path="/admin" element={<ProtectedRoute><AdminHome /></ProtectedRoute>} /> */}
@@ -30,7 +30,7 @@ function App() {
           <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
           <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
