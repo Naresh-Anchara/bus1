@@ -18,6 +18,7 @@ function Login() {
      localStorage.setItem("token",response.data.data);
      window.location.href = "/bus1";
      alert(response.data.message)
+     navigate("/");
    }
    else{
      message.error(response.data.message);
