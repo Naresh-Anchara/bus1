@@ -16,7 +16,7 @@ function Login() {
    if(response.data.success){
      message.success(response.data.message);
      localStorage.setItem("token",response.data.data);
-     window.location.href = "/";
+     window.location.href = "/bus1";
      alert(response.data.message)
    }
    else{
