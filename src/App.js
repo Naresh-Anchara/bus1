@@ -16,12 +16,13 @@ import Bookings from "./pages/Bookings";
 function App() {
   const {loading} = useSelector(state => state.alerts);
   return (
-    <div>
+    <div> 
+      {/*
       { loading && <Loader/> }
       <HashRouter>
         <Routes>
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
-           {/* <Route path="/admin" element={<ProtectedRoute><AdminHome /></ProtectedRoute>} /> */}
+           
           <Route path="/book-now/:id" element={<ProtectedRoute><BookNow /></ProtectedRoute>}/>
           <Route path="/bookings" element={<ProtectedRoute><Bookings /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
@@ -30,7 +31,11 @@ function App() {
           <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
           <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
         </Routes>
-      </HashRouter>
+      </HashRouter>  
+      
+      */}  
+      <h1>hello</h1>
+
     </div>
   );
 }
